@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: vela-pos
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/vela_pos
+    username: vela_user
+    password: vela123
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+vela:
+  security:
+    jwt:
+      secret: ${JWT_SECRET:change-this-dev-only-secret-key-please-override-in-prod-min-32-bytes}
+      expiration-minutes: ${JWT_EXPIRATION_MINUTES:480}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+server:
+  port: ${SERVER_PORT:8081}
+
+logging:
+  level:
+    com.vela.pos: DEBUG
+    org.hibernate.SQL: DEBUG

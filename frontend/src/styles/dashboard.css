@@ -1,0 +1,28 @@
+.stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.stat-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+.stat-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.stat-icon { width: 34px; height: 34px; border-radius: 9px; background: var(--dusty-rose-light); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.stat-value { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; color: var(--aubergine-800); }
+.stat-label { font-size: 12.5px; color: var(--ink-soft); font-weight: 500; }
+
+.sparkline { width: 100%; height: 150px; }
+
+.bar-list .bar-row { margin-bottom: 14px; }
+.bar-row-top { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+.bar-row-top .name { font-weight: 600; color: var(--ink); }
+.bar-row-top .val { color: var(--ink-soft); }
+.bar-track { background: var(--line); border-radius: 6px; height: 8px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 6px; background: linear-gradient(90deg, var(--gold), var(--dusty-rose)); }
+
+.branch-compare { display: flex; align-items: flex-end; gap: 24px; height: 160px; padding-top: 10px; }
+.branch-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.branch-bars { display: flex; align-items: flex-end; gap: 5px; height: 120px; }
+.branch-bars .b { width: 14px; border-radius: 4px 4px 0 0; }
+.branch-bars .b1 { background: var(--aubergine-700); }
+.branch-bars .b2 { background: var(--gold); }
+.branch-name { font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+
+.list-time { background: var(--dusty-rose-light); color: var(--aubergine-800); font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 8px; white-space: nowrap; }
+.progress-mini { width: 70px; height: 6px; background: var(--line); border-radius: 4px; overflow: hidden; flex-shrink: 0; }
+.progress-mini > div { height: 100%; background: var(--good); }
+
